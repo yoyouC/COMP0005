@@ -9,9 +9,6 @@ import java.io.IOException;
 import javax.imageio.ImageIO;
 
 public class Main {
-    public static void main(String[] args) throws IOException {
-        new Main().run();
-    }
 
     Algorithms algorithms = new Algorithms();
     public int[][] z1c;
@@ -64,5 +61,9 @@ public class Main {
             System.out.println("Exception occured :" + e.getMessage());
         }
         System.out.println("Images were written succesfully.");
+    }
+
+    public static void main(String[] args) throws IOException {
+        new Main().run();
     }
 }

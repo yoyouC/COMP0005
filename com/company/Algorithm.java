@@ -36,30 +36,6 @@ class Algorithms {
         return cost_matrix;
     }
 
-    public double[] generatematcharr(double[][] cost_matrix){
-        double[] match = new double[cost_matrix[0].length];
-        int i = cost_matrix.length-1;
-        int j = cost_matrix.length-1;
-        while(i > 0 && j > 0)
-        {
-            if(cost_matrix[i][j] - Occlusion == cost_matrix[i][j-1] && !(cost_matrix[i][j] - Occlusion == cost_matrix[i-1][j]))
-            {
-                j = j - 1;
-            }
-            else if(cost_matrix[i][j] - Occlusion == cost_matrix[i-1][j] &&  !(cost_matrix[i][j] - Occlusion == cost_matrix[i][j-1]))
-            {
-                i = i - 1;
-            }
-            else
-            {
-                match[i] = j;
-                i = i - 1;
-                j = j - 1;
-            }
-        }
-        return match;
-    }
-
     public double[] generate_match_array(double[][] cost_matrix){
         double[] match_array = new double[cost_matrix.length];
         for(int x = 0; x < cost_matrix.length; x++)
